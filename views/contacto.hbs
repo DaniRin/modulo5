@@ -1,0 +1,73 @@
+<nav class="navbar fixed-top navbar-expand-lg" style="background-color: #41610B;">
+    <a class="navbar-brand" href="/" style="font-family: 'Pacifico', cursive;"><h5>Las infancias</h5></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="/quienessomos"><h5>¿Quiénes somos?</h5></a>
+          </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/novedades"><h5>Novedades</h5></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/derechos"><h5>Derechos</h5></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/materiales"><h5>Materiales</h5></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contacto"><h5>Contacto</h5></a>
+        </li>
+     </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <nav class="navbar navbar-dark bg-dark"></nav>
+    <!-- Navbar content -->
+  </nav>
+      <br>
+      <br>
+      <br>
+      <br>
+      <!-- abro párrafo de texto -->
+      <div class="mx-auto" style="width: 600px;">
+        <h2>Si tenés alguna duda o querés que nos comuniquemos con vos, por favor completá el siguiente formulario de contacto. ¡Muchas gracias!</h2>
+      </div>
+      <!-- cierro párrafo de texto -->
+
+      <br>
+      <br>
+      <!-- abro formulario de contacto -->
+      <div class="d-flex justify-content-center">
+        <form action="/contacto" method="post" style="width: 1000px;">
+          <h2>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Ingrese su nombre y apellido</label>
+              <input type="nombre y apellido" class="form-control" id="nombreyapellido" name="nombreyapellido" placeholder="Nombre y apellido">
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Ingrese su dirección de mail</label>
+              <input type="name" class="form-control" id="exampleFormControlInput1" name="mail" placeholder="name@example.com">
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Deje a continuación su consulta.</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="mensaje"></textarea>
+            </div>
+            <button class="btn btn-primary" style="background-color: #E0C219; border: #E0C219;" type="submit"><h2>Enviar</h2></button> 
+          </h2>
+        </form>
+        {{message}}
+        <!-- cierro formulario de contacto -->
+
+      </div>
+      
+    
+
+      <br>
+      <br>
+      <footer>
+        <p class="text-center" style="background-color: #9CA199;">Diseñado por Daniela Rinaldi</p>
+    </footer>

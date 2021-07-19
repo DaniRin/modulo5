@@ -1,0 +1,91 @@
+nav {
+    font-family: 'Exo 2', sans-serif;
+    color: black;
+}
+
+
+footer{
+    background-color: #A7A0F0;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    font-size: 100px;
+    color: #65645E;
+}
+
+h3 {
+    text-align: center;
+    font-family: 'Exo 2', sans-serif, Semi-bold 600;
+    color: white; 
+}
+
+h4 {
+    text-align: center;
+    font-family: 'Exo 2', sans-serif Semi-bold 600;
+    color: #65645E; 
+}
+
+h5 {
+    text-align: center;
+    font-family: 'Exo 2', sans-serif Semi-bold 600;
+    color: white;
+    font-size: 20px;
+}
+
+p {
+    text-align: center;
+    font-family: 'Exo 2', sans-serif, Semi-bold 600;
+    font-size: 12px;
+    color: #65645E;
+}
+
+h6 {
+    text-align: center;
+    font-family: 'Exo 2', sans-serif, Semi-bold 600;
+    color: #65645E;
+    font-size: 14px;
+}
+
+h2 {
+    text-align: left;
+    font-family: 'Exo 2', sans-serif, Semi-bold 600;
+    color: #65645E;
+    font-size: 17px;
+}
+
+.lista-novedades {
+    margin: 350px;
+    padding: 50px;
+    list-style: none;
+}
+
+.lista-novedades li {
+    margin: 5px 0;
+}
+
+.lista-novedades li a {
+    background-color: #E0C219;
+    transition: all .2s ease-in-out;
+    display: block;
+}
+
+.lista-novedades li a:hover {
+    color: blue;
+    background-color: gray;
+}
+
+.lista-novedades li a img {
+    width: 450px;
+    height: 150px;
+    transition: all .2s ease-in-out;
+    margin-right: 1rem;
+    opacity: 0.7;
+}
+
+.lista-novedades li a:hover img {
+    filter: none;
+    margin-right: 1.4rem;
+    opacity: 1;
+}
