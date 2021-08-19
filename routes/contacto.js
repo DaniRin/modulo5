@@ -12,13 +12,12 @@ router.post('/', async (req, res, next) => {
 var nombreyapellido = req.body.nombreyapellido;
 var mail = req.body.mail;
 var mensaje = req.body.mensaje;
-console.log(req.body);
   
 
 var obj = {
   to: 'danieelarinaldi@gmail.com',
   subject: 'contacto desde la web',
-  html: nombreyapellido + '' + 'se contactó a través de la web y dejó este mail' + mail + '.Además, mandó el siguiente mensaje: "' + mensaje + '"'
+  html: nombreyapellido + '' + ' se contactó a través de la web y dejó este mail ' + mail + '. Además, mandó el siguiente mensaje: "' + mensaje + '"'
   }
 
 

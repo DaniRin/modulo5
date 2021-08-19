@@ -3,8 +3,11 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var session = require('express-session');
 
 require('dotenv').config();
+var pool = require('./models/bd');
+
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -13,7 +16,7 @@ var novedadesRouter = require('./routes/novedades');
 var derechosRouter = require('./routes/derechos');
 var materialesRouter = require('./routes/materiales');
 var contactoRouter = require('./routes/contacto');
-
+const { getMaxListeners } = require('./models/bd');
 
 var app = express();
 
@@ -34,6 +37,47 @@ app.use('/novedades', novedadesRouter);
 app.use('/derechos', derechosRouter);
 app.use('/materiales', materialesRouter);
 app.use('/contacto', contactoRouter);
+
+// select
+// pool.query("select * from `alumnos rinaldi`").then(function (resultados) {
+//   console.log(resultados)
+// });
+
+// insert
+// var obj = {
+//   nombre: 'daniela',
+//   apellido: 'rinaldi',
+//   trabajo: 'comunicadora',
+//   edad: 33,
+//   salario: 10000,
+//   mail: 'xxx@gmail.com'
+// }
+
+// pool.query('insert into `alumnos rinaldi` set ?', [obj]).then(function (resultados)
+// {
+//   console.log(resultados)
+// });
+
+// update
+// var id = 1;
+// var obj = {
+//   nombre: 'pablo',
+//   apellido: 'gómez'
+// }
+
+// pool.query('update `alumnos rinaldi` set ? where id_empleado=?', [obj, id]).then(function (resultados) {
+//   console.log(resultados);
+// });
+
+// delete
+var pool = require('./models/bd');
+
+var id = 1;
+
+pool.query('delete from `alumnos rinaldi` where id_empleado= ?', [id]).then(function (resultados) {
+  console.log(resultados);
+});
+
 
 app.get('/quienessomos', function(req,res){
   res.send('hola, soy la seción "¿Quiénes somos"?')
