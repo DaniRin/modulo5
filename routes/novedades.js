@@ -1,9 +1,15 @@
 var express = require('express');
 var router = express.Router();
+var novedadesModel = require('../models/novedadesModel');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('novedades', { title: 'NOVEDADES' });//novedades.hbs
+router.get('/', async function(req, res, next) {
+  novedades = await novedadesModel.getNovedades();
+
+  res.render('novedades', { 
+    novedades
+  });
 });
+
 
 module.exports = router;

@@ -23,112 +23,55 @@
      </div>
         </li>
       </ul>
-    </div>
-  </nav>
-  <nav class="navbar navbar-dark bg-dark"></nav>
-    <!-- Navbar content -->
-  </nav>
-  <br>
-  <br>
-  <br>
-  <br>
-  <div class="mx-auto" style="width: 1000px;"> <h4>Te compartimos algunas de las novedades sobre infancias y adolescencias para que estés al tanto de que sucede con las niñas y niños en nuestro país.</h4> </div>
+  </div>
+</nav>
+<nav class="navbar navbar-dark bg-dark"></nav>
+<!-- Navbar content -->
+</nav>
+<br>
+ <br>
+<br>
+<br>
+<div class="mx-auto" style="width: 1000px;"> <h4>Te compartimos algunas de las novedades sobre infancias y adolescencias para que estés al tanto de que sucede con las niñas y niños en nuestro país.</h4> </div>
     <!-- abro novedades -->
-  <div id="novedades">
-  <ul class="lista-novedades">
-    <li class="list-group-item"><a href="#" data-toggle="modal" data-target="#modaluno"><img src="images/niñesescuela1-01.jpg"><h4>La vuelta de las niñas y niños a las aulas</h4></a></li>
-    <li class="list-group-item"><a href="#" data-toggle="modal" data-target="#modaldos"><img src="images/niñesdeporte1-01.jpg"><h4>La importancia del deporte durante la pandemia</h4></a></li>
-    <li class="list-group-item"><a href="#" data-toggle="modal" data-target="#modaltres"><img src="images/niñesvacuna1-01.jpg"><h4>Los médicos piden no abandonar el calendario de vacunación</h4></a></li>
-    <li class="list-group-item"><a href="#" data-toggle="modal" data-target="#modalcuatro"><img src="images/niñesplaza1-01.jpg"><h4>Salidas recreativas de chicas y chicos en el país</h4></a></li>
-    <li class="list-group-item"><a href="#" data-toggle="modal" data-target="#modalcinco"><img src="images/niñescomiendo1-01.png"><h4>Los comedores escolares siguen funcionando</h4></a></li>
+<div id="novedades">
+<ul class="lista-novedades">
+    {{#each novedades}}
+    <li class="list-group-item">
+        <a href="javascript:void(0);" data-toggle="modal" data-target="#modal{{id}}"><img src="images/niñesescuela1-01.jpg"><h5>{{titulo}}</h5>
+        </a>
+    </li>
+    {{/each}}
   </ul>
 </div>
+{{#each novedades}}
 <!-- abro modal 1 -->
-<div class="modal fade" id="modaluno" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="modal{{id}}" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog" modal-dialog-centered modal-dialog-scrollable>
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">La vuelta de las niñas y niños a las aulas</h4>
+        <h4 class="modal-title">{{titulo}}</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <h6>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod voluptatem quas aut dolorum aliquid autem repudiandae tempora ea eum illo. Tempore, nostrum dolorem at in quidem consequatur repellat ut facere? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam, obcaecati voluptatum asperiores laboriosam cupiditate nemo vel fuga animi mollitia expedita corrupti ad officia quod ex doloremque libero saepe debitis accusamus.lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque nobis quod provident at unde, debitis quae, facilis numquam temporibus dolores ab. Perspiciatis rem modi fugiat voluptatem corporis labore corrupti! Corrupti! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil quisquam earum vel, soluta iusto totam, fuga minus repudiandae aut, tenetur consectetur aperiam ex modi fugit in aliquam rerum. Reprehenderit, voluptatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. In facilis ex pariatur ipsum necessitatibus dolore cupiditate. Dolor molestias voluptate, voluptates repellat ut odio in praesentium quo illum dolore mollitia laudantium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat odio labore debitis delectus adipisci nulla corrupti est facere neque vel beatae quos rerum impedit laboriosam magni, reiciendis placeat eos nostrum.</h6>
+        <h5 style="background-color: #65645E;">{{bajada}}</h5>
+        <h6>{{contenido}}</h6>
       </div>
     </div>
   </div>
 </div>
-<!-- abro modal 2 -->
-<div class="modal fade" id="modaldos" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog" modal-dialog-centered modal-dialog-scrollable>
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">La importancia del deporte durante la pandemia</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <h6>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod voluptatem quas aut dolorum aliquid autem repudiandae tempora ea eum illo. Tempore, nostrum dolorem at in quidem consequatur repellat ut facere? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam, obcaecati voluptatum asperiores laboriosam cupiditate nemo vel fuga animi mollitia expedita corrupti ad officia quod ex doloremque libero saepe debitis accusamus.lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque nobis quod provident at unde, debitis quae, facilis numquam temporibus dolores ab. Perspiciatis rem modi fugiat voluptatem corporis labore corrupti! Corrupti! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil quisquam earum vel, soluta iusto totam, fuga minus repudiandae aut, tenetur consectetur aperiam ex modi fugit in aliquam rerum. Reprehenderit, voluptatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. In facilis ex pariatur ipsum necessitatibus dolore cupiditate. Dolor molestias voluptate, voluptates repellat ut odio in praesentium quo illum dolore mollitia laudantium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat odio labore debitis delectus adipisci nulla corrupti est facere neque vel beatae quos rerum impedit laboriosam magni, reiciendis placeat eos nostrum.</h6>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- abro modal 3 -->
-<div class="modal fade" id="modaltres" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog" modal-dialog-centered modal-dialog-scrollable>
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">Los médicos piden no abandonar el calendario de vacunación</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <h6>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod voluptatem quas aut dolorum aliquid autem repudiandae tempora ea eum illo. Tempore, nostrum dolorem at in quidem consequatur repellat ut facere? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam, obcaecati voluptatum asperiores laboriosam cupiditate nemo vel fuga animi mollitia expedita corrupti ad officia quod ex doloremque libero saepe debitis accusamus.lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque nobis quod provident at unde, debitis quae, facilis numquam temporibus dolores ab. Perspiciatis rem modi fugiat voluptatem corporis labore corrupti! Corrupti! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil quisquam earum vel, soluta iusto totam, fuga minus repudiandae aut, tenetur consectetur aperiam ex modi fugit in aliquam rerum. Reprehenderit, voluptatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. In facilis ex pariatur ipsum necessitatibus dolore cupiditate. Dolor molestias voluptate, voluptates repellat ut odio in praesentium quo illum dolore mollitia laudantium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat odio labore debitis delectus adipisci nulla corrupti est facere neque vel beatae quos rerum impedit laboriosam magni, reiciendis placeat eos nostrum.</h6>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- abro modal 4 -->
-<div class="modal fade" id="modalcuatro" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog" modal-dialog-centered modal-dialog-scrollable>
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">Salidas recreativas de chicas y chicos en el país</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <h6>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod voluptatem quas aut dolorum aliquid autem repudiandae tempora ea eum illo. Tempore, nostrum dolorem at in quidem consequatur repellat ut facere? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam, obcaecati voluptatum asperiores laboriosam cupiditate nemo vel fuga animi mollitia expedita corrupti ad officia quod ex doloremque libero saepe debitis accusamus.lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque nobis quod provident at unde, debitis quae, facilis numquam temporibus dolores ab. Perspiciatis rem modi fugiat voluptatem corporis labore corrupti! Corrupti! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil quisquam earum vel, soluta iusto totam, fuga minus repudiandae aut, tenetur consectetur aperiam ex modi fugit in aliquam rerum. Reprehenderit, voluptatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. In facilis ex pariatur ipsum necessitatibus dolore cupiditate. Dolor molestias voluptate, voluptates repellat ut odio in praesentium quo illum dolore mollitia laudantium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat odio labore debitis delectus adipisci nulla corrupti est facere neque vel beatae quos rerum impedit laboriosam magni, reiciendis placeat eos nostrum.</h6>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- abro modal 5 -->
-<div class="modal fade" id="modalcinco" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog" modal-dialog-centered modal-dialog-scrollable>
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">Los comedores escolares siguen funcionando</h4>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <h6>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod voluptatem quas aut dolorum aliquid autem repudiandae tempora ea eum illo. Tempore, nostrum dolorem at in quidem consequatur repellat ut facere? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam, obcaecati voluptatum asperiores laboriosam cupiditate nemo vel fuga animi mollitia expedita corrupti ad officia quod ex doloremque libero saepe debitis accusamus.lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque nobis quod provident at unde, debitis quae, facilis numquam temporibus dolores ab. Perspiciatis rem modi fugiat voluptatem corporis labore corrupti! Corrupti! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil quisquam earum vel, soluta iusto totam, fuga minus repudiandae aut, tenetur consectetur aperiam ex modi fugit in aliquam rerum. Reprehenderit, voluptatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. In facilis ex pariatur ipsum necessitatibus dolore cupiditate. Dolor molestias voluptate, voluptates repellat ut odio in praesentium quo illum dolore mollitia laudantium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat odio labore debitis delectus adipisci nulla corrupti est facere neque vel beatae quos rerum impedit laboriosam magni, reiciendis placeat eos nostrum.</h6>
-      </div>
-    </div>
-  </div>
-</div>
-  <br>
-  <br>
-  <br>
-  <br>   
-      <br>
-      <br>
-      <footer>
-        <p class="text-center" style="background-color: #9CA199;">Diseñado por Daniela Rinaldi</p>
-    </footer>
+{{/each}}
+
+<br>
+<br>
+<br>
+<br>   
+<br>   
+<br>   
+<br>
+<br>
+<footer>
+    <p class="text-center" style="background-color: #9CA199;">Diseñado por Daniela Rinaldi</p>
+</footer>

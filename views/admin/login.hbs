@@ -1,5 +1,4 @@
-<!-- abro barra de inicio -->
-  <nav class="navbar fixed-top navbar-expand-lg" style="background-color: #41610B;">
+<nav class="navbar fixed-top navbar-expand-lg" style="background-color: #41610B;">
     <a class="navbar-brand" href="/" style="font-family: 'Pacifico', cursive;"><h5>Las infancias</h5></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -13,10 +12,10 @@
             <a class="nav-link" href="/novedades"><h5>Novedades</h5></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="derechos.html"><h5>Derechos</h5></a>
+          <a class="nav-link" href="/derechos"><h5>Derechos</h5></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/materiales"><h5>Materiales</h5></a>
+          <a class="nav-link" href="materiales.html"><h5>Materiales</h5></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/contacto"><h5>Contacto</h5></a>
@@ -24,23 +23,24 @@
      </div>
         </li>
       </ul>
-    </div>
-  </nav>
-  <nav class="navbar navbar-dark bg-dark"></nav>
-
-      <div class="container">
-        <div class="row" style="margin:200px 0">
-          <div class="col">
-            <form action="/admin/login" method="post">
-              <div clas="form-group">
-                <input type="text" class="form-control" placeholder="Usuario" name="usuario">
-              </div>
-              <br>
-              <div class="form-group">
-                <input type="password" class="form-control" placeholder="Password" name="password">
-              </div>
-              <button class="btn btn-primary" style="background-color: #E0C219; border: #E0C219;" type="submit"><h5>Enviar</h5></button>
-            </form>
+  </div>
+</nav>
+<nav class="navbar navbar-dark bg-dark"></nav>
+<!-- Navbar content -->
+      
+<div class="container">
+  <div class="row" style="margin:200px 0">
+     <div class="col">
+        <form action="/admin/login" method="post">
+          <div clas="form-group">
+             <input type="text" class="form-control" placeholder="Usuario" name="usuario">
+          </div>
+          <br>
+          <div class="form-group">
+              <input type="password" class="form-control" placeholder="Password" name="password">
+          </div>
+          <button class="btn btn-primary" style="background-color: #E0C219; border: #E0C219;" type="submit"><h5>Enviar</h5></button>
+        </form>
             {{#if error}}
                 <h6>El usuario o la clave no es correcta.</h6>
             {{/if}}

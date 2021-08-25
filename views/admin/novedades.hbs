@@ -1,5 +1,4 @@
-<!-- abro barra de inicio -->
-  <nav class="navbar fixed-top navbar-expand-lg" style="background-color: #41610B;">
+<nav class="navbar fixed-top navbar-expand-lg" style="background-color: #41610B;">
     <a class="navbar-brand" href="/" style="font-family: 'Pacifico', cursive;"><h5>Las infancias</h5></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -13,10 +12,10 @@
             <a class="nav-link" href="/novedades"><h5>Novedades</h5></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="derechos.html"><h5>Derechos</h5></a>
+          <a class="nav-link" href="/derechos"><h5>Derechos</h5></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/materiales"><h5>Materiales</h5></a>
+          <a class="nav-link" href="materiales.html"><h5>Materiales</h5></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/contacto"><h5>Contacto</h5></a>
@@ -24,26 +23,61 @@
      </div>
         </li>
       </ul>
-    </div>
-  </nav>
-  <nav class="navbar navbar-dark bg-dark"></nav>
-
+  </div>
+</nav>
+<nav class="navbar navbar-dark bg-dark"></nav>
+<!-- Navbar content -->
   <br>
   <br>
   <br>
+  {{!-- abro primer párrafo de texto --}}
   <div class="mx-auto" style="width: 1000px;">
       <h4>Bienvenido/a {{usuario}} a tu administrador.</h4>
       <h6>Desde aquí podrás realizar diferentes tareas, como cargar novedades en el sitio web.</h6>
       </div>
       <br>
       <br>
-      <div class="mx-auto" style="width: 1000px;">
-      <a href="/admin/login/logout"><button class="btn btn-primary" style="background-color: #E0C219; border: #E0C219;" type="submit"><h5>Cerrar sesión</h5></button></a>
-      </div>
-      
-      <br>
-      <br>
-      <br>
-      <footer>
-        <p class="text-center" style="background-color: #9CA199;">Diseñado por Daniela Rinaldi</p>
-    </footer>
+{{!-- cierro primer parrafo de texto --}}
+<br>
+<br>
+{{!-- abro tabla --}}
+<table class="table">
+  <thead style="background-color: #65645E; border: #65645E;">
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Título</th>
+      <th scope="col">Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each novedades}}
+    <tr>
+      <th scope="row">{{id}}</th>
+      <td>{{titulo}}</td>
+      <td class="text-right">
+        <a href="/admin/novedades/eliminar/{{id}} " class="btn btn-secondary"><i class="bi bi-trash-fill"></i></a>
+        <a href="/admin/novedades/modificar/{{id}} " class="btn btn-secondary"><i class="bi bi-pencil-fill"></i></a>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+<br>
+{{!-- abro primer botón --}}
+ <div class="mx-auto" style="width: 500px;">
+   <button class="btn btn-primary" style="background-color: #65645E; border: #65645E;" type="submit"><h5>Cargar nueva novedad</h5></button>
+ </div>
+ {{!-- cierro primer botón --}}
+<br>
+{{!-- abro segundo botón --}}
+<div class="mx-auto" style="width: 500px;">
+  <a href="/admin/login/logout"><button class="btn btn-primary" style="background-color: #E0C219; border: #E0C219;" type="submit"><h5>Cerrar sesión</h5></button></a>
+</div>
+<br>
+<br>
+<br>
+{{!-- cierro segundo botón --}}
+
+<footer>
+  <p class="text-center" style="background-color: #9CA199;">Diseñado por Daniela Rinaldi</p>
+</footer>
