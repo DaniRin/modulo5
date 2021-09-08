@@ -31,22 +31,30 @@
 <div class="container">
   <div class="row" style="margin:200px 0">
      <div class="col">
-        <form action="/admin/login" method="post">
-          <div clas="form-group">
-             <input type="text" class="form-control" placeholder="Usuario" name="usuario">
+       <h5>Modificar la novedad</h5>
+        <form method="post" action="/admin/novedades/modificar">
+           <input type="hidden" value="{{novedad.id}}" name="id">
+           <div clas="form-group"></div>
+             <input type="text" class="form-control" placeholder="Título" value="{{novedad.titulo}}" class="form-control" name="titulo">
           </div>
           <br>
           <div class="form-group">
-              <input type="password" class="form-control" placeholder="Password" name="password">
+              <textarea placeholder="Bajada" class="form-control" name="bajada">{{novedad.bajada}}</textarea>
           </div>
-          <button class="btn btn-primary" style="background-color: #E0C219; border: #E0C219;" type="submit"><h5>Enviar</h5></button>
+          <div class="form-group">
+              <textarea placeholder="Contenido" class="form-control" name="contenido">{{novedad.contenido}}</textarea>
+          </div>
+          <div class="form-group">
+              <textarea placeholder="Imagen" class="form-control" name="imagen">{{novedad.imagen}}</textarea>
+          </div>
+          <button type="sumbit" class= class="btn btn-primary" style="background-color: #E0C219; border: #E0C219;"><h5>Modificar</h5></button>
         </form>
-            {{#if error}}
-                <h6>El usuario o la clave no es correcta.</h6>
-            {{/if}}
+        {{#if error}}
+         <h6>{{message}}</h6>
+        {{/if}}
           </div>
-        </div>
-      </div>
+  </div>
+</div>
 
 
       <footer>
