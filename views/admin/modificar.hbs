@@ -32,22 +32,27 @@
   <div class="row" style="margin:200px 0">
      <div class="col">
        <h5>Modificar la novedad</h5>
-        <form method="post" action="/admin/novedades/modificar">
+       <form action="/admin/novedades/modificar" method="post">
+          <div clas="form-group">
            <input type="hidden" value="{{novedad.id}}" name="id">
-           <div clas="form-group"></div>
-             <input type="text" class="form-control" placeholder="Título" value="{{novedad.titulo}}" class="form-control" name="titulo">
+           </div>
+          <br>
+          <div class="form-group">
+              <input type="text" class="form-control" placeholder="Título" value="{{novedad.titulo}}" name="titulo">
           </div>
           <br>
           <div class="form-group">
-              <textarea placeholder="Bajada" class="form-control" name="bajada">{{novedad.bajada}}</textarea>
-          </div>
+              <input type="text" class="form-control" placeholder="Bajada" value="{{novedad.bajada}}" name="bajada">
+          </div> 
+          <br>
           <div class="form-group">
-              <textarea placeholder="Contenido" class="form-control" name="contenido">{{novedad.contenido}}</textarea>
+              <input type="text" class="form-control" placeholder="Contenido" value="{{novedad.contenido}}" name="contenido">
           </div>
+          <br>
           <div class="form-group">
-              <textarea placeholder="Imagen" class="form-control" name="imagen">{{novedad.imagen}}</textarea>
+              <input type="text" class="form-control" placeholder="Imagen" value="{{novedad.imagen}}" name="imagen">
           </div>
-          <button type="sumbit" class= class="btn btn-primary" style="background-color: #E0C219; border: #E0C219;"><h5>Modificar</h5></button>
+          <button class="btn btn-primary" style="background-color: #E0C219; border: #E0C219;" type="submit"><h5>Modificar</h5></button>
         </form>
         {{#if error}}
          <h6>{{message}}</h6>
