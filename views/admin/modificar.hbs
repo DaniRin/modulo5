@@ -32,7 +32,7 @@
   <div class="row" style="margin:200px 0">
      <div class="col">
        <h5>Modificar la novedad</h5>
-       <form action="/admin/novedades/modificar" method="post">
+       <form action="/admin/novedades/modificar" method="post" enctype="multipart/form-data">
           <div clas="form-group">
            <input type="hidden" value="{{novedad.id}}" name="id">
            </div>
@@ -50,7 +50,12 @@
           </div>
           <br>
           <div class="form-group">
-              <input type="text" class="form-control" placeholder="Imagen" value="{{novedad.imagen}}" name="imagen">
+
+            <label><input type="file" name='imagen' id='imagen'></label>
+            <label><input type="checkbox" class="form-control" name="img_delete" 
+            id="img_delete" value='1'> 
+            <h6>¿Desdea eliminar imagen actual?</h6></label>
+            <input type='hidden' name='img_original' value='{{novedad.img_id}}'>
           </div>
           <button class="btn btn-primary" style="background-color: #E0C219; border: #E0C219;" type="submit"><h5>Modificar</h5></button>
         </form>

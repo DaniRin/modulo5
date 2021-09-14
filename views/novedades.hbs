@@ -38,7 +38,7 @@
 <ul class="lista-novedades">
     {{#each novedades}}
     <li class="list-group-item">
-        <a href="javascript:void(0);" data-toggle="modal" data-target="#modal{{id}}"><img src="images/niñesescuela1-01.jpg"><h5>{{titulo}}</h5>
+        <a href="javascript:void(0);" data-toggle="modal" data-target="#modal{{id}}"><img src="{{imagen}}" with='500'><h5>{{titulo}}</h5>
         </a>
     </li>
     {{/each}}
@@ -57,6 +57,7 @@
       </div>
       <div class="modal-body">
         <h5 style="background-color: #65645E;">{{bajada}}</h5>
+        <img src="{{imagen}}" alt="{{titulo}}">
         <h6>{{contenido}}</h6>
       </div>
     </div>
