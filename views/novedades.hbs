@@ -33,23 +33,28 @@
 <br>
 <br>
 <div class="mx-auto" style="width: 800px;"> <h4>Te compartimos algunas de las novedades sobre infancias y adolescencias para que estés al tanto de que sucede con las niñas y niños en nuestro país.</h4> </div>
-    <!-- abro novedades -->
-<div class="mx-auto" style="width: 800px;"></div>  
-<ul class="lista-novedades">
+
+<div class="row row-cols-1 row-cols-md-3">
+ <div class="col mb-9">
+  <div class="novedades" style="width: 450px;">
     {{#each novedades}}
-    <li class="list-group-item">
-        <a href="javascript:void(0);" data-toggle="modal" data-target="#modal{{id}}"><img src="{{imagen}}" with='500'><h5>{{titulo}}</h5>
-        </a>
-    </li>
-    {{/each}}
-  </ul>
+    <div class="card-deck">
+      <div class="card">
+        <a href="javascript:void(0);" data-toggle="modal" data-target="#modal{{id}}"><img src="{{imagen}}" style="width: 400px"></a>
+        <div class="card-body">
+        <h4 class="card-title" style= "background-color: #E0C219">{{titulo}}</h4>
+        </div>
+      </div> 
+    </div>
+  {{/each}}
+  </div> 
+ </div> 
 </div>
 {{#each novedades}}
-<!-- abro modal 1 -->
 <div class="modal fade" id="modal{{id}}" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog" modal-dialog-centered modal-dialog-scrollable>
-    <div class="modal-content">
-      <div class="modal-header">
+    <div class="modal-content" style="width: 550px;">
+     <div class="modal-header">
         <h4 class="modal-title">{{titulo}}</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
@@ -64,6 +69,7 @@
   </div>
 </div>
 {{/each}}
+
 <br>
 <br>
 <br>
